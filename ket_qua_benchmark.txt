@@ -1,0 +1,75 @@
+Embedding backend: local:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+Chunker: FixedSizeChunker
+Documents: 17
+Loaded chunks: 267
+
+Q1: Khách mua online tại LUG có bao nhiêu ngày để đổi trả và điều kiện cơ bản là gì?
+Filter: {}
+Gold: Trong 07 ngày kể từ ngày nhận hàng; có hóa đơn hoặc thông tin mua hàng trên hệ thống bảo hành điện tử; sản phẩm còn nguyên vẹn và chưa qua sử dụng.
+  1. score=0.6175 doc_id=chinh-sach-bao-hanh-bieu-phi-phu-kien chunk_id=chinh-sach-bao-hanh-bieu-phi-phu-kien#5
+     cách sử dụng sẽ MIỄN PHÍ SỬA CHỮA và tính phí phụ kiện 2. Đối với sản phẩm giảm giá từ 10-50%: + BẢO HÀNH TỪ 03-12 THÁNG 3. Đối với sản phẩm giảm giá trên 50%: + KHÔNG BẢO HÀNH....
+  2. score=0.6087 doc_id=chinh-sach-doi-tra-va-hoan-tien chunk_id=chinh-sach-doi-tra-va-hoan-tien#16
+     cọc giữ hàng đối với thiết bị vệ sinh, tủ bếp, máy lọc tổng.. Sau thời gian giữ hàng theo quy định, vì lý do bất khả kháng Khách chưa nhận hàng, Khách hàng cần thanh toán 100% đ...
+  3. score=0.6056 doc_id=chinh-sach-doi-tra-hang chunk_id=chinh-sach-doi-tra-hang#3
+     chịu tất cả chi phí trong quá trình vận chuyển hàng hóa Khi kho LUG.vn nhận được sản phẩm cần đổi sẽ tiến hành giao sản phẩm mới cho khách hàng. 1. Sản phẩm bị lỗi do nhà sản xu...
+Top-3 evidence: NO
+
+Q2: Sản phẩm Giày BQ được giảm giá từ 25% có được trả hàng hay chỉ được đổi màu hoặc size?
+Filter: {}
+Gold: Không. Sản phẩm ưu đãi từ 25% trở lên chỉ được đổi màu hoặc size khi còn hàng, không được hỗ trợ trả hàng.
+  1. score=0.7843 doc_id=chinh-sach-doi-tra chunk_id=chinh-sach-doi-tra#1 GOLD
+     lẻ chưa bị gỡ ra khỏi sản phẩm - Sản phẩm còn trong thời hạn 30 ngày kể từ ngày nhận hàng - Sản phẩm không nằm trong danh mục ưu đãi lớn hơn hoặc bằng 25% Lưu ý: Đối với trường ...
+  2. score=0.7213 doc_id=chinh-sach-bao-hanh-tron-doi chunk_id=chinh-sach-bao-hanh-tron-doi#2
+     i hậu, thâu thun, may chân quai 2.2. HẠNG MỤC BẢO HÀNH TÍNH PHÍ - Với trường hợp thay đế, Giày BQ sẽ xem xét những dòng đế có thể thay được và có chính sách hỗ trợ 50% chi phí b...
+  3. score=0.6993 doc_id=chinh-sach-doi-tra chunk_id=chinh-sach-doi-tra#3
+     ản phẩm - Trường hợp giá trị sản phẩm mới tại thời điểm đổi hàng < Giá trị sản phẩm cũ (dựa theo giá trị trên hóa đơn thanh toán): Giày BQ hoàn lại phần chênh lệch giá sản phẩm ...
+Top-3 evidence: YES
+
+Q3: Khánh Vy Home hoàn tiền theo quy trình và thời gian nào nếu sản phẩm đổi mới cùng model vẫn bị lỗi kỹ thuật?
+Filter: {'category': 'returns-policy'}
+Gold: Khách được hoàn tiền nếu sản phẩm đổi mới cùng loại, model và nhãn hiệu vẫn lỗi kỹ thuật. Khánh Vy Home hoàn trong 24–72 giờ sau khi nhận xác nhận của nhà sản xuất rằng lỗi không thể khắc phục.
+  1. score=0.7532 doc_id=chinh-sach-doi-tra-va-hoan-tien chunk_id=chinh-sach-doi-tra-va-hoan-tien#2 GOLD
+     hách hàng và bộ phận giao hàng và đối với sản phẩm có hàng sẵn và khu vực phục vụ không quá 30km tính từ kho Khánh Vy Home. - Khách hàng được hoàn lại tiền nếu sản phẩm gặp sự c...
+  2. score=0.7059 doc_id=chinh-sach-doi-tra-va-hoan-tien chunk_id=chinh-sach-doi-tra-va-hoan-tien#5
+     4h – 72h kể từ lúc Khánh Vy Home nhận được xác nhận từ nhà sản xuất sản phẩm bị lỗi không thể khắc phục được. - Sản phẩm chỉ được đổi trả sau khi có xác nhận từ bộ phận kỹ thuật...
+  3. score=0.6854 doc_id=chinh-sach-doi-tra-va-hoan-tien chunk_id=chinh-sach-doi-tra-va-hoan-tien#4
+     ày giao và nhận hàng giữa Khánh Vy Home và khách hàng. - Khách hàng được đổi sản phẩm mới cùng loại có giá trị bằng hoặc cao hơn sản phẩm hiện tại (bù tiền chênh lệch nếu có) đố...
+Top-3 evidence: YES
+A/B without filter: top3=['chinh-sach-doi-tra-va-hoan-tien', 'chinh-sach-doi-tra-va-hoan-tien', 'chinh-sach-doi-tra-va-hoan-tien']; evidence=YES
+
+Q4: Khách phải chờ bao lâu để nhận lại sản phẩm sau bảo hành: lỗi nhẹ tại chỗ, sản phẩm thông thường và lỗi nặng gửi xưởng?
+Filter: {'category': 'warranty-policy'}
+Gold: Lỗi nhẹ: 15–20 phút; thông thường: 2–3 ngày, không tính Chủ nhật; lỗi nặng phải gửi xưởng: 7–10 ngày, không tính Chủ nhật.
+  1. score=0.7014 doc_id=chinh-sach-bao-hanh-tron-doi chunk_id=chinh-sach-bao-hanh-tron-doi#3 GOLD
+     thuật), Giày BQ sẽ có chính sách hỗ trợ tương ứng - Những sản phẩm bị lỗi quá nặng (bể đế, mục quai, mục dây...) hoặc những sản phẩm quá cũ, bị mốc vì không được bảo quản đúng c...
+  2. score=0.6105 doc_id=chinh-sach-bao-hanh-bieu-phi-phu-kien chunk_id=chinh-sach-bao-hanh-bieu-phi-phu-kien#2
+     gian chính xác. + Từ 1-2 tuần: Nếu không thay phụ kiện + Từ 2-4 tuần: Nếu có thay phụ kiện - Tuỳ vào loại phụ kiện và tình trạng có sẵn, một số loại phụ kiện đặc biệt cần nhập t...
+  3. score=0.5180 doc_id=chinh-sach-bao-hanh-bieu-phi-phu-kien chunk_id=chinh-sach-bao-hanh-bieu-phi-phu-kien#4
+     huyển sang chế độ bảo hành SẢN PHẨM DA NỮ SẢN PHẨM DA NAM Quy định bảo hành 1.Đổi mới sản phẩm trong 07 ngày kể từ ngày mua và KHÔNG BẢO HÀNH đối với các thương hiệu: + Polo Wor...
+Top-3 evidence: YES
+A/B without filter: top3=['chinh-sach-doi-tra-va-hoan-tien', 'chinh-sach-doi-tra-hang', 'chinh-sach-doi-tra-va-hoan-tien']; evidence=NO
+
+Q5: Khi không đồng ý với quyết định xử lý yêu cầu trả hàng hoàn tiền, cần gửi phản hồi trong bao lâu?
+Filter: {'audience': 'seller'}
+Gold: Người bán phải phản hồi trong vòng 02 ngày lịch kể từ ngày nhận thông báo của Shopee, trừ khi Shopee quy định thời hạn khác.
+  1. score=0.6773 doc_id=shopee-nguoi-ban-tra-hang-hoan-tien chunk_id=shopee-nguoi-ban-tra-hang-hoan-tien#14 GOLD
+     ên Ứng Dụng Shopee và/hoặc thư điện tử và/hoặc tin nhắn điện thoại. Người Bán cần gửi phản hồi trong vòng 02 ngày lịch (hoặc thời hạn khác được quy định bởi Shopee trong từng th...
+  2. score=0.5352 doc_id=shopee-nguoi-ban-tra-hang-hoan-tien chunk_id=shopee-nguoi-ban-tra-hang-hoan-tien#17
+     êu cầu trả hàng/hoàn tiền cho một hoặc một số sản phẩm trong đơn hàng, không phải tất cả sản phẩm), hoặc Người Mua nhấn yêu cầu trả hàng/hoàn tiền với lý do Chưa nhận được hàng ...
+  3. score=0.5347 doc_id=shopee-nguoi-ban-tra-hang-hoan-tien chunk_id=shopee-nguoi-ban-tra-hang-hoan-tien#25
+     Cơ quan chức năng để giải quyết. 11.2. Nếu một bên khiếu nại bên kia tới các Cơ quan chức năng, bên khiếu nại cần thông báo kịp thời với Shopee về vụ việc tranh chấp này kèm the...
+Top-3 evidence: YES
+A/B without filter: top3=['shopee-nguoi-ban-tra-hang-hoan-tien', 'chinh-sach-tra-hang-va-hoan-tien', 'chinh-sach-doi-tra-hang']; evidence=YES
+
+Evidence hit@3: 4/5
+
+=== BASELINE (frontmatter removed, chunk_size=500) ===
+chinh-sach-doi-tra-hang                     fixed_size   count=   9 avg_length=451.4
+chinh-sach-doi-tra-hang                     by_sentences count=   7 avg_length=507.0
+chinh-sach-doi-tra-hang                     recursive    count=   9 avg_length=399.9
+chinh-sach-doi-tra                          fixed_size   count=  10 avg_length=482.1
+chinh-sach-doi-tra                          by_sentences count=   6 avg_length=708.5
+chinh-sach-doi-tra                          recursive    count=  11 avg_length=394.4
+shopee-nguoi-ban-tra-hang-hoan-tien         fixed_size   count=  44 avg_length=495.1
+shopee-nguoi-ban-tra-hang-hoan-tien         by_sentences count=  43 avg_length=452.1
+shopee-nguoi-ban-tra-hang-hoan-tien         recursive    count=  54 avg_length=361.2
