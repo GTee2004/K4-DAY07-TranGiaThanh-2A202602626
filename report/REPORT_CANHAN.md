@@ -76,10 +76,14 @@ Vượt qua bộ kiểm thử là điều kiện tính điểm phần này.
 ### Kết Quả Kiểm Thử (Test Results)
 
 ```
-# Dán kết quả (output) của: pytest tests/ -v
+$ python -m unittest -v tests.test_solution
+...
+Ran 42 tests in 0.005s
+
+OK
 ```
 
-**Số lượng bài test vượt qua (pass):** __ / 42
+**Số lượng bài test vượt qua (pass):** 42 / 42
 
 ---
 
@@ -106,16 +110,16 @@ Chạy **5 câu hỏi đánh giá của nhóm** trên mã nguồn cá nhân củ
 
 | # | Câu hỏi (Query) | Top-1 Chunk truy xuất được (tóm tắt) | Điểm Score | Có liên quan không? (Relevant) | Câu trả lời của Agent (tóm tắt) |
 |---|-------|--------------------------------|-------|-----------|------------------------|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 | Đối với người bán hoặc đại lý của PyLoHerb, chi phí vận chuyển và bốc dỡ được hỗ trợ như thế nào? Dùng `metadata_filter={"audience": "seller"}`. | Top-1 chưa chứa đủ bằng chứng; chunk đáp án ở hạng 3, thuộc mục **III. Hỗ trợ đại lý**. | 1 / 2 (hạng 3) | Không ở top-1; có trong top-3 | PyLoHerb hỗ trợ vận chuyển từ công ty đến đối tác bán hàng; chi phí bốc dỡ mỗi bên chịu một đầu. |
+| 2 | Theo chính sách HiClean, khách hàng đổi hàng từ ngày 04 đến ngày 07 phải chịu mức phí bao nhiêu? | Top-1 chưa phải chunk đáp án; chunk nêu mức phí nằm ở hạng 3. | 1 / 2 (hạng 3) | Không ở top-1; có trong top-3 | Khách hàng chịu 20% phí đổi hàng, phí vận chuyển, lắp đặt và phần chênh lệch giá trị hàng hóa nếu có. |
+| 3 | Với đơn hàng COD tại Smart HomeKit, người mua phải cung cấp thông tin gì để nhận tiền hoàn trả? | Chunk thuộc phần **II. Quy định hoàn tiền**, nêu yêu cầu cung cấp thông tin tài khoản ngân hàng. | 2 / 2 (hạng 1) | Có | Người mua phải cung cấp thông tin tài khoản ngân hàng để nhận tiền hoàn trả. |
+| 4 | Theo chính sách 102 ngày ngủ thử Tatana của Thế Giới Nệm, thời gian xử lý hoàn tiền là bao lâu? | Top-1 chưa phải chunk đáp án; chunk có mốc 14 ngày làm việc nằm ở hạng 3. | 1 / 2 (hạng 3) | Không ở top-1; có trong top-3 | Hoàn tiền trong vòng 14 ngày làm việc kể từ khi Thế Giới Nệm nhận lại sản phẩm và xác nhận sản phẩm đạt điều kiện. |
+| 5 | Khách mua hàng online tại XTREND được yêu cầu đổi trả trong thời gian bao lâu? | Kết quả trả về đúng tài liệu/chủ đề nhưng sai mục, không chứa mốc 07 ngày. | 0 / 2 | Không | Agent cho biết ngữ cảnh truy xuất chưa đủ để xác định thời hạn đổi trả. |
 
-**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** __ / 5
+**Bao nhiêu câu hỏi trả về chunk có liên quan trong top-3?** 4 / 5
 
 **Điều hay nhất tôi học được từ thành viên khác / nhóm khác (qua demo):**
-> *Viết 2-3 câu:*
+> Tôi nhận ra chunk mạch lạc chưa chắc có thứ hạng truy xuất tốt nhất: chiến lược Fixed-size của bạn Nguyễn Minh Thái đạt 6/10 nhờ overlap 50 ký tự, cao hơn Recursive của tôi 1 điểm. Từ chiến lược Heading/Section của bạn Trần Kim Phương, tôi học được lợi ích của việc giữ tên điều khoản trong chunk, nhưng cũng thấy rằng lặp heading quá nhiều có thể khiến các chunk cùng chủ đề cạnh tranh nhau; lần sau tôi sẽ thử kết hợp heading, recursive fallback và một overlap nhỏ.
 
 ---
 
@@ -123,9 +127,9 @@ Chạy **5 câu hỏi đánh giá của nhóm** trên mã nguồn cá nhân củ
 
 | Tiêu chí | Điểm tự đánh giá |
 |----------|-------------------|
-| Khởi động (Warm-up) | / 5 |
-| Hướng tiếp cận của tôi (My Approach) | / 10 |
-| Hoàn thiện code (Core Implementation — tests) | / 30 |
-| Dự đoán độ tương tự (Similarity Predictions) | / 5 |
-| Kết quả truy xuất của tôi (Competition Results) | / 10 |
-| **Tổng phần cá nhân** | **/ 60** |
+| Khởi động (Warm-up) | 5 / 5 |
+| Hướng tiếp cận của tôi (My Approach) | 10 / 10 |
+| Hoàn thiện code (Core Implementation — tests) | 30 / 30 |
+| Dự đoán độ tương tự (Similarity Predictions) | 5 / 5 |
+| Kết quả truy xuất của tôi (Competition Results) | 5 / 10 |
+| **Tổng phần cá nhân** | **55 / 60** |
